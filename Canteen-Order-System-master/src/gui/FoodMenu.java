@@ -147,26 +147,11 @@ public class FoodMenu {
 					JOptionPane.showMessageDialog(null, "You not ordered anything yet");
 				} else {
 					try {
-						final JOptionPane optionPane = new JOptionPane("Tap the card.", JOptionPane.INFORMATION_MESSAGE);
-                		final JDialog dialog = new JDialog();
-                		dialog.setTitle("Message Box");
-                		dialog.setModal(true);
-						dialog.setContentPane(optionPane);
-                		dialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
-                		dialog.pack();
-
-						dialog.setVisible(false);
-                        dialog.dispose();
-						
 						OrderMenu order = new OrderMenu();
 						order.main(header);
-						
 						order.setVisible(true);
 						setVisible(false);
 						frame.dispose();
-						//JOptionPane.getRootFrame().dispose();
-						//JOptionPane.showMessageDialog(null, "Tap the card. ");
-						//JPanel.showMessageDialog("Tap the card.");
 
 					} catch (IOException e1) {
 						// TODO Auto-generated catch block
